@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiber</title>
+    <script
+      src="https://kit.fontawesome.com/5e6c8487ab.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles/app.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__left">
+          <a href="index.html" class="nav__logo">Fiber</a>
+        </div>
+        <div class="nav__burger">
+          <input type="checkbox" id="check" />
+          <label for="check" class="nav__icon"
+            ><i class="fas fa-bars"></i
+          ></label>
+          <div class="nav__menu">
+            <ul class="nav__bg">
+              <li class="nav__li">
+                <a href="#" class="nav__link">Community</a>
+              </li>
+              <li class="nav__li"><a href="#" class="nav__link">Pricing</a></li>
+              <li class="nav__li">
+                <a href="#" class="nav__link">Features</a>
+              </li>
+              <li class="nav__li"><a href="#" class="nav__link">Sign in</a></li>
+              <li class="nav__li"><a href="#" class="nav__btn">Sign up</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav__right">
+          <a href="#" class="nav__link">Sign in</a>
+          <a href="signup.html" class="nav__btn">Sign Up</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="signup container">
+        <div class="signup__grid">
+          <div class="signup__left">
+            <h1 class="signup__heading">Create your Fiber account</h1>
+            <form class="signup__form">
+              <div class="signup__camp">
+                <label for="fname" class="signup__label">Your name</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="fname"
+                  class="signup__input"
+                  placeholder="John Doe"
+                />
+              </div>
+              <div class="signup__camp">
+                <label for="email" class="signup__label">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="signup__input"
+                  placeholder="john@example.com"
+                />
+              </div>
+              <div class="signup__camp">
+                <label for="password" class="signup__label">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="signup__input"
+                  placeholder="At least 8 characters"
+                />
+              </div>
+              <div class="signup__camp signup__camp-C">
+                <input type="checkbox" class="signup__checkbox" />
+                <p class="signup__text">
+                  By creating an account onf Fiber, you agree to the
+                  <span class="signup__span">Terms & Conditions.</span>
+                </p>
+              </div>
+              <input
+                type="submit"
+                value="Create Fiber Account"
+                class="signup__submit"
+              />
+              <p class="signup__in">
+                Already have an account?
+                <span class="signup__span">Sign In</span>
+              </p>
+            </form>
+          </div>
+          <div class="signup__right">
+            <img src="src/images/SignUpImage.png" class="signup__img" />
+            <p class="signup__name">Unparalleled Templates</p>
+            <p class="signup__subname">
+              Crafted by a team of professionals designers, our templates are
+              eunparalleled in the market
+            </p>
+            <div class="signup__circles">
+              <div class="signup__circle"></div>
+              <div class="signup__circle"></div>
+              <div class="signup__circle"></div>
+              <div class="signup__circle"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__grid container">
+        <div class="footer__box">
+          <div class="footer__inside">
+            <h2 class="footer__heading">Fiber</h2>
+            <p class="footer__text">With Fiber, you can setup your own personal portfolio in minutes with dozens or premade beatiful templates.</p>
+  
+          </div>
+          <p class="footer__text">Made with &#9829; in the Netherlands</p>
+        </div>
+        <div class="footer__box">
+          <h2 class="footer__heading">Sitemap</h2>
+          <a href="#" class="footer__link">Homepage</a>
+          <a href="#" class="footer__link">Pricing</a>
+          <a href="#" class="footer__link">Testimonials</a>
+          <a href="#" class="footer__link">Features</a>
+        </div>
+        <div class="footer__box">
+          <h2 class="footer__heading">Resources</h2>
+          <a href="#" class="footer__link">Support</a>
+          <a href="#" class="footer__link">Contact</a>
+          <a href="#" class="footer__link">FAQ</a>
+        </div>
+        <div class="footer__box">
+          <h2 class="footer__heading">Company</h2>
+          <a href="#" class="footer__link">About</a>
+          <a href="#" class="footer__link">Customers</a>
+          <a href="#" class="footer__link">Blog</a>
+        </div>
+        <div class="footer__box">
+          <h2 class="footer__heading">Portfolios</h2>
+          <a href="#" class="footer__link">Sarah Andrews</a>
+          <a href="#" class="footer__link">Mathew Higgins</a>
+          <a href="#" class="footer__link">Janice Dave</a>
+        </div>
+      </div>
+      <div class="footer__attribution container">
+        <p class="footer__copyright">Challenge by <a href="https://www.codewell.cc" class="footer__link">Codewell.cc</a>Coded by <a href="#" class="footer__link">Joaquin Trivel Mera</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

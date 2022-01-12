@@ -1,0 +1,138 @@
+@use '../base/variables' as v ;
+@use '../base/mixins' as m ;
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 700;
+    color: v.$black;
+  }
+
+  #check{
+    display: none;
+  }
+
+  &__icon {
+    cursor: pointer;
+    font-size: 3rem;
+    color: v.$black;
+    @include m.desktop { 
+      display: none;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 10rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    max-width: 140rem;
+    width: 95%;
+    margin-inline: auto ;
+    border-radius: 1rem;
+    background-color: hsla(0, 0%, 0%, 0.404);
+    transition: all 250ms ease;
+    transform: scale(0);
+    @include m.desktop { 
+      position: relative;
+      transform: scale(1);
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      left: auto;
+      right: auto;
+      top: 0;
+      width: auto;
+    }
+  }
+
+  #check:checked ~ &__menu{
+    transform: scale(1);
+  }
+
+  &__bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    @include m.desktop { 
+      flex-direction: row;
+      gap: 3rem;
+    }
+  }
+
+  &__li {
+    @include m.desktop { 
+      &:nth-child(4) {
+        display: none;
+      }
+      &:nth-child(5) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: v.$white;
+    font-weight: 700;
+    position: relative;
+    @include m.desktop { 
+      font-weight: 400;
+      color: v.$primaryColor;
+      transition: all 250ms ease;
+      &:hover{
+        color: v.$secondaryBg;
+      }
+      &::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: v.$secondaryBg;
+        bottom: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: all 250ms ease;
+      }
+      &:hover::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__right {
+    display: none;
+    @include m.desktop { 
+      display: block;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+
+  &__btn {
+    text-decoration: none;
+    color: v.$white;
+    background-color: v.$secondaryBg;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    transition: all 250ms ease;
+    font-weight: 700;
+    &:hover {
+      background-color: lighten(v.$secondaryBg, 10%);
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@use '../base/variables' as v ;
+@use '../base/mixins' as m ; 
+
+.signup {
+  padding: 5rem 0;
+  overflow: hidden;
+  &__heading {
+    font-size: 4rem;
+    font-weight: 700;
+    color: v.$black;
+    line-height: 1.2;
+    margin-bottom: 5rem;
+  }
+
+  &__grid {
+    margin-top: 2rem;
+    @include m.grid(1,2rem);
+      align-items: center;
+      justify-items: center;
+    @include m.desktop { 
+      @include m.grid(2,2rem);
+      justify-items: start;
+    }
+  
+  }
+
+  &__left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__right {
+    display: none;
+    @include m.desktop { 
+      display: block;
+      background-color: v.$secondaryBg;
+      padding: 10rem 5rem;
+      border-radius: .5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+
+  &__name {
+    font-size: 3.5rem;
+    color: v.$white;
+    font-weight: 700;
+  }
+
+  &__subname {
+    color: v.$white;
+    text-align: center;
+  }
+
+  &__circles {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: v.$white;
+    cursor: pointer;
+    &:not(:first-child) {
+      opacity: .5;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 45rem;
+  }
+
+  &__camp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+    width: 100%;
+    &-C{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+  }
+
+  &__label {
+    font-weight: 700;
+    color: v.$black;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid v.$primaryColor;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: v.$primaryColor;
+    }
+  }
+
+  &__span {
+    color: v.$secondaryBg;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  &__submit {
+    border: none;
+    background-color: v.$secondaryBg;
+    padding: 1.2rem 2rem;
+    color: v.$white;
+    font-weight: 700;
+    border-radius: .5rem;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__in {
+    align-self: center;
+  }
+}
