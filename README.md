@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://www.codewell.cc/challenges/chirp-landing-page--60fc1e36a383e41090a3c71c/solution/61dcd21c6da8ba3fac6b01cc)
-- Live Site URL: [Live Site URL](https://codewell-chirp-landing-page-challenge.netlify.app/)
+- Solution URL: [Solution URL](https://www.codewell.cc/challenges/fiber-landing-page--608a7e639691700015db16d1)
+- Live Site URL: [Live Site URL](https://codewell-fiberpage-challenge.netlify.app/)
 
 ### Built with
 - SASS
